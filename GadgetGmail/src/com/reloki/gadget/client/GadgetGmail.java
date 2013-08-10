@@ -15,7 +15,7 @@ public class GadgetGmail extends Gadget<UserPreferences> {
 
 	@Override
 	protected void init(UserPreferences preferences) {
-		Button simpleButton = new Button("SimpleGadget");
+		Button simpleButton = new Button("Login with Github");
 		simpleButton.addClickHandler(new ClickHandler() {
 			
 			@Override

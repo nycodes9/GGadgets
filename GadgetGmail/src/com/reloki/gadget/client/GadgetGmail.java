@@ -34,7 +34,7 @@ public class GadgetGmail extends Gadget<UserPreferences> {
 				Window.alert("Hello Gmail");
 			}
 		});
-//		RootPanel.get().add(simpleButton);
+		RootPanel.get().add(simpleButton);
 	
 		addDailymotionAuth();
 	}

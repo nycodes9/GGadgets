@@ -3,10 +3,14 @@ package com.reloki.gadget.client;
 import com.google.api.gwt.oauth2.client.Auth;
 import com.google.api.gwt.oauth2.client.AuthRequest;
 import com.google.gwt.core.client.Callback;
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.gadgets.client.Gadget;
 import com.google.gwt.gadgets.client.UserPreferences;
+import com.google.gwt.gadgets.client.io.GadgetsIo;
+import com.google.gwt.gadgets.client.io.IoProvider;
+import com.google.gwt.gadgets.client.io.ResponseReceivedHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
@@ -22,22 +26,21 @@ public class GadgetGmail extends Gadget<UserPreferences> {
 	
 	@Override
 	protected void init(UserPreferences preferences) {
-		Button simpleButton = new Button("Login with Github");
+		Button simpleButton = new Button("Click Me");
 		simpleButton.addClickHandler(new ClickHandler() {
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				Window.alert("Hello World");
-				
+				Window.alert("Hello Gmail");
 			}
 		});
-//		RootPanel.get().add(simpleButton);
+		RootPanel.get().add(simpleButton);
 	
-		addDailymotionAuth();
+//		addDailymotionAuth();
 	}
 	
 	private void addDailymotionAuth() {
-	    Button button = new Button("Authenticate with Github");
+	    Button button = new Button("Login with Github");
 	    button.addClickHandler(new ClickHandler() {
 	      @Override
 	      public void onClick(ClickEvent event) {
